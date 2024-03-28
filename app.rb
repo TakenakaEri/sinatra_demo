@@ -6,7 +6,13 @@ class App < Sinatra::Base
     register Sinatra::Reloader
   end
 
+# ここを変更していく
+
   get '/' do
-    erb :index
+    options = {
+      url: 'https://api.genderize.io/'
+    }
+    conn = Faraday.new()
+      f.response
   end
 end
